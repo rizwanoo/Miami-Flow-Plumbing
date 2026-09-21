@@ -17,6 +17,8 @@ export const COMPANY_INFO = {
   phone: '(305) 555-FLOW',
   rawPhone: 'tel:+13055553569',
   emergencyPhone: '(305) 555-9111',
+  whatsappPhone: '+1 (305) 555-3569',
+  whatsappUrl: 'https://wa.me/13055553569?text=Hello%20Miami%20Flow%20Plumbing%2C%20I%20need%20a%20plumber%20estimate%20or%20emergency%20service.',
   email: 'service@miamiflowplumbing.com',
   address: '1200 Brickell Ave, Suite 800, Miami, FL 33131',
   license: 'State of Florida Certified Plumbing Contractor #CFC1430922',
