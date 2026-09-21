@@ -2,5 +2,7 @@
   "name": "Miami Flow Plumbing",
   "description": "Premier residential and commercial plumbing company in Miami, Florida. 24/7 emergency service, leak detection, drain cleaning, water heaters, and repiping.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }

@@ -8,15 +8,13 @@ import { HomePage } from './pages/HomePage';
 import { AboutPage } from './pages/AboutPage';
 import { ServicesPage } from './pages/ServicesPage';
 import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage';
-import { SkeletonCard } from './components/common/SkeletonCard';
-import { Sparkles, X, CheckCircle2 } from 'lucide-react';
+import { WhatsAppFloatingButton } from './components/common/WhatsAppFloatingButton';
 
 export function App() {
   const [currentPage, setCurrentPage] = useState<PageId>('home');
   const [targetSection, setTargetSection] = useState<string | undefined>(undefined);
   const [isEstimateModalOpen, setIsEstimateModalOpen] = useState(false);
   const [selectedServiceId, setSelectedServiceId] = useState<string | undefined>(undefined);
-  const [showSkeletonDemo, setShowSkeletonDemo] = useState(false);
 
   // Handle navigation
   const handleNavigate = (page: PageId, sectionId?: string) => {
@@ -93,38 +91,8 @@ export function App() {
         initialServiceId={selectedServiceId}
       />
 
-      {/* Floating Demo Preview Pill for Loading Skeleton */}
-      <div className="fixed bottom-20 left-4 z-40 hidden md:block">
-        {showSkeletonDemo ? (
-          <div className="bg-white/95 backdrop-blur-md rounded-2xl p-5 border border-slate-200 shadow-2xl w-80 animate-in fade-in slide-in-from-bottom-4">
-            <div className="flex items-center justify-between mb-3">
-              <span className="text-xs font-bold uppercase tracking-wider text-sky-700 flex items-center gap-1.5">
-                <Sparkles className="w-4 h-4 text-sky-500" />
-                Live Shimmer Skeleton
-              </span>
-              <button
-                onClick={() => setShowSkeletonDemo(false)}
-                className="text-slate-400 hover:text-slate-700 p-1"
-                aria-label="Close skeleton preview"
-              >
-                <X className="w-4 h-4" />
-              </button>
-            </div>
-            <p className="text-[11px] text-slate-500 mb-3">
-              Horizontal linear gradient shimmer on 1.5s soft pulse loop:
-            </p>
-            <SkeletonCard />
-          </div>
-        ) : (
-          <button
-            onClick={() => setShowSkeletonDemo(true)}
-            className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900/80 hover:bg-slate-900 text-white text-[11px] font-bold shadow-lg backdrop-blur-md border border-white/20 transition-all cursor-pointer"
-          >
-            <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
-            <span>Inspect Micro-Skeleton</span>
-          </button>
-        )}
-      </div>
+      {/* Floating WhatsApp Quick Dispatch Button */}
+      <WhatsAppFloatingButton />
 
     </div>
   );
